@@ -1,0 +1,14 @@
+// SPDX-License-Identifier: BSD-2-Clause
+cc_binary {
+    name: "optee_selftest",
+    vendor: true,
+    srcs: ["host/main.c"],
+    local_include_dirs: ["ta/include"],
+    shared_libs: [
+        "libteec",
+    ],
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+}
